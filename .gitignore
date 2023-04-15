@@ -37,5 +37,8 @@ out/
 .vscode/
 
 ### custom ###
-.env.*
+.env*
 !.env.template
+gradle
+gradlew
+gradlew.bat
