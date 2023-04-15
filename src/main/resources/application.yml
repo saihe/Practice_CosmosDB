@@ -1,0 +1,15 @@
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+  cloud:
+    azure:
+      cosmos:
+        endpoint: ${COSMOS_ENDPOINT:localhost}
+        database: ${COSMOS_DATABASE:local}
+        key: ${COSMOS_KEY:dummy}
+        populate-query-metrics: true
