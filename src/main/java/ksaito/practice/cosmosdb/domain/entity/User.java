@@ -2,8 +2,7 @@ package ksaito.practice.cosmosdb.domain.entity;
 
 import com.azure.spring.data.cosmos.core.mapping.Container;
 import lombok.Data;
-import lombok.ToString;
-import org.joda.time.DateTime;
+import lombok.EqualsAndHashCode;
 import org.springframework.data.annotation.Id;
 
 /**
@@ -11,6 +10,7 @@ import org.springframework.data.annotation.Id;
  */
 @Container(containerName = "user")
 @Data
+@EqualsAndHashCode(callSuper=false)
 public class User extends Base {
   @Id
   private String id;
