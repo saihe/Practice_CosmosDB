@@ -1,4 +1,4 @@
-package ksaito.practice.cosmosdb.domain.entity;
+package ksaito.practice.cosmosdb.domain;
 
 import lombok.Data;
 

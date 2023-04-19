@@ -1,6 +1,6 @@
-package ksaito.practice.cosmosdb.application.service.implement;
+package ksaito.practice.cosmosdb.application.usecase.implement;
 
-import ksaito.practice.cosmosdb.application.service.ExternalService;
+import ksaito.practice.cosmosdb.application.usecase.ExternalUseCase;
 import lombok.val;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
-public class ExternalServiceImpl implements ExternalService {
-  public ExternalServiceImpl() {
+public class ExternalUseCaseImpl implements ExternalUseCase {
+  public ExternalUseCaseImpl() {
     System.out.println("外部サービス誕生");
   }
 

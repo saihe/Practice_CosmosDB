@@ -1,7 +1,7 @@
-package ksaito.practice.cosmosdb.application.service.implement;
+package ksaito.practice.cosmosdb.application.usecase.implement;
 
-import ksaito.practice.cosmosdb.application.service.MyService;
-import ksaito.practice.cosmosdb.application.service.ExternalService;
+import ksaito.practice.cosmosdb.application.usecase.MyUseCase;
+import ksaito.practice.cosmosdb.application.usecase.ExternalUseCase;
 import lombok.SneakyThrows;
 import lombok.val;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,13 +10,13 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MyServiceImpl implements MyService {
+public class MyUseCaseImpl implements MyUseCase {
   @Autowired
-  private ExternalService externalService;
+  private ExternalUseCase externalUseCase;
 
   @Override
   public String serve() {
-    val restTemplate = externalService.restTemplate();
+    val restTemplate = externalUseCase.restTemplate();
     val res = restTemplate.exchange(
       "https://weather.tsukumijima.net/api/forecast/city/400040",
       HttpMethod.GET,
